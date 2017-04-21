@@ -1,0 +1,192 @@
+@import url(reset.css);
+html,body {
+	height: 100%;
+}
+#container {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	background: url(../resource_imgs/window_bg1.jpg) center center no-repeat;
+	background-size: 100% 100%;
+}
+
+/*设置一个通用的css的隐藏样式hidden*/
+.hidden{
+	display: none;
+}
+
+.cursor{
+	cursor: pointer;
+}
+
+
+/*===================================遮罩=============================*/
+#layer{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: none;
+	background: rgba(11,15,17,.85);
+	z-index: 2000;
+}
+
+/*============================固定的welcome============================*/
+#home{
+	position: fixed;
+	top: 30px;
+	color: rgba(255,255,255,.9);
+}
+
+
+/*===========================projects==========================*/
+#layer .closeLayer{
+	position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background: none;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    color: #000;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+#layer .closeLayer:hover{
+	background-color: #585858;
+	color: #fff;
+}
+
+
+/*=========遮罩层显示按钮========*/
+#container .add{
+	height: 60px;
+	width: 50px;
+	background: #FE644F;
+	font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    line-height: normal;
+    cursor: pointer;
+    position: fixed;
+    top: 135px;
+    left: 0;
+}
+#container .add span{
+	line-height: 60px;
+	text-align: center;
+	color: #fff;
+}
+
+#projects{
+	padding-top: 50px;
+}
+#projects h2,h5{
+	width: auto;
+	margin: 0 auto 10px auto;
+    line-height: normal;
+    color: #fff;
+}
+#projects ul{
+	width: 100%;
+	height: auto;
+}
+#projects ul li{
+	box-sizing: border-box;
+	width: 20%;
+	/*background: green;*/
+	float: left;
+}
+
+#projects ul li a{
+	display: block;
+	width: 66px;
+	height: 66px;
+	line-height: 66px;
+	border-radius: 50%;
+	margin:10px auto 6px auto;
+	background: #0A0D0E;
+}
+#projects ul li span{
+	display: block;
+	width: 100%;
+	height: 21px;
+	color: #eeecec;
+	font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .8px;
+    line-height: 21px;
+}
+
+
+/*===========================设置footer部分============================*/
+#box-foot{
+	position: absolute;
+    bottom: 24px;
+    height: 30px;
+    z-index: 1055;
+}
+#box-foot>ul{
+	display: block;
+	height: 100%;
+}
+#box-foot>ul li{
+	box-sizing: border-box;
+	width: 30px;
+	height: 100%;
+	margin-left: 15px;
+	border-radius: 50%;
+	border: 2px solid #D6E5E0;
+	background: transparent;
+	cursor: pointer;
+}
+#box-foot>ul li span{
+	display: inline-block;
+	height: 100%;
+	color: #fff;
+	margin-top: 5px;
+	margin-left: 6px;
+}
+#box-foot>ul li:hover{
+	border: 2px solid #fff;
+}
+
+/*=======================背景音乐====================*/
+#music{
+	display: none;
+	position: absolute;
+	background: rgba(59,49,41,.2);
+	border: 1px solid rgba(0,0,0,.5);
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	box-shadow: 1px 1px rgba(255,255,255,.5), 1px 1px rgba(255,255,255,.5) inset ;
+	color: #fff;
+	top: 50px;
+	right: 50px;
+}
+#music audio{
+	visibility: hidden;
+	z-index: -100;
+}
+#music ul{
+	position: absolute;
+	top: 13px;
+}
+#music ul li{
+	display: inline-block;
+}
+#music p{
+	box-sizing: border-box;
+	font-size: 20px;
+	padding: 10px 0;
+	color: #08F598;
+	font-weight: bold;
+}

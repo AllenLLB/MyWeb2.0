@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>MyWeb</title>
+	<link rel="stylesheet" type="text/css" href="../bower_components/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../bower_components/css/index.css" />
+	<script type="text/javascript" src="../bower_components/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../bower_components/jquery/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../bower_components/jquery/handlebars-v4.0.5.js"></script>
+	<script type="text/javascript" src="../bower_components/js/Animate.js"></script>
+	<script type="text/javascript" src="../bower_components/js/index.js"></script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<div id="container">
+		<div id="home" class="col-md-6 col-md-offset-3 text-center h1">Best Wishes To You!</div>
+		<div class="add about_me_hide">
+			<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+		</div>
+		<div id="layer">
+			<div id="projects" class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+				<h2 class="text-center">Share&nbsp&nbsp&nbsp&nbspMyWeb</h2>
+				<h5 class="text-center">多彩的网页作品墙</h5>
+				<hr>
+				<ul class="list-unstyled">
+					<li>
+						<a class="img-circle text-center" href="/paper">1</a>
+						<span class="text-center">paperWall</span>
+					</li>
+					<li>
+						<a class="img-circle text-center" href="/paper">2</a>
+						<span class="text-center">paperWall</span>
+					</li>
+					<li>
+						<a class="img-circle text-center" href="/paper">3</a>
+						<span class="text-center">paperWall</span>
+					</li>
+					<li>
+						<a class="img-circle text-center" href="/paper">4</a>
+						<span class="text-center">paperWall</span>
+					</li>
+					<li>
+						<a class="img-circle text-center" href="/paper">5</a>
+						<span class="text-center">paperWall</span>
+					</li>
+					<li>
+						<a class="img-circle text-center" href="/paper">6</a>
+						<span class="text-center">paperWall</span>
+					</li>
+				</ul>
+			</div>
+			
+			<button class="closeLayer img-circle">
+				<span>×</span>
+			</button>
+		</div>
+		<div id="box-foot" class="col-md-12 col-lg-12 about_me_hide">
+			<ul class="list-unstyled col-md-5 col-lg-5">
+				<li class="pull-left">
+					<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+				</li>
+				<li class="pull-left">
+					<span class="glyphicon glyphicon-music music" aria-hidden="true"></span>
+				</li>
+				<li class="pull-left">
+					<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+				</li>
+				<li class="pull-left">
+					<span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+				</li>
+			</ul>
+		</div>
+		<div id="music" class="col-lg-4 col-md-4">
+			<audio controls="controls" src="../bower_components/mp3/菊次郎的夏天.mp3">
+			  Your browser does not support this audio format.
+			</audio>
+			<ul class="list-unstyled col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+				<li class="col-md-1 col-lg-1">
+					<span class="glyphicon glyphicon-music"></span>
+				</li>
+				<li class="col-md-1 col-lg-1 col-md-offset-1 col-lg-offset-1">
+					<span class="glyphicon glyphicon-step-backward cursor pre"></span>
+				</li>
+				<li class="col-md-1 col-lg-1">
+					<span class="glyphicon glyphicon-pause hidden cursor pause"></span>
+					<span class="glyphicon glyphicon-play cursor restart"></span>
+				</li>
+				<li class="col-md-1 col-lg-1">
+					<span class="glyphicon glyphicon-step-forward cursor next"></span>
+				</li>
+				<li class="col-md-1 col-lg-1 col-md-offset-4 col-lg-offset-4">
+					<span class="glyphicon glyphicon-remove cursor remove"></span>
+				</li>
+			</ul>
+			<p class="col-md-12 col-lg-12 text-center"></p>
+		</div>
+	</div>
+</body>
