@@ -22,6 +22,7 @@
 <body>
 	<div id="container">
 		<div id="home" class="col-md-6 col-md-offset-3 text-center h1">Best Wishes To You!</div>
+		<a id="follow-me" class="col-md-6 col-md-offset-3 text-center" href="/personPage">跟着我了解我</a>
 		<div class="add about_me_hide">
 			<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
 		</div>
@@ -33,27 +34,27 @@
 				<ul class="list-unstyled">
 					<li>
 						<a class="img-circle text-center" href="/picWall">1</a>
-						<span class="text-center">picture wall</span>
+						<span class="text-center">照片墙</span>
 					</li>
 					<li>
 						<a class="img-circle text-center" href="/personPage">2</a>
-						<span class="text-center">personPage</span>
+						<span class="text-center">个人网站</span>
 					</li>
 					<li>
 						<a class="img-circle text-center" href="/picWall">3</a>
-						<span class="text-center">picture wall</span>
+						<span class="text-center">照片墙</span>
 					</li>
 					<li>
 						<a class="img-circle text-center" href="/picWall">4</a>
-						<span class="text-center">picture wall</span>
+						<span class="text-center">照片墙</span>
 					</li>
 					<li>
 						<a class="img-circle text-center" href="/picWall">5</a>
-						<span class="text-center">picture wall</span>
+						<span class="text-center">照片墙</span>
 					</li>
 					<li>
 						<a class="img-circle text-center" href="/picWall">6</a>
-						<span class="text-center">picture wall</span>
+						<span class="text-center">照片墙</span>
 					</li>
 				</ul>
 			</div>
@@ -64,20 +65,22 @@
 		</div>
 		<div id="box-foot" class="col-md-12 col-lg-12 about_me_hide">
 			<ul class="list-unstyled col-md-5 col-lg-5">
-				<li class="pull-left">
+				<li class="pull-left" class="最近痴迷的小照片">
 					<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
 				</li>
-				<li class="pull-left">
+				<li class="pull-left" title="listening music">
 					<span class="glyphicon glyphicon-music music" aria-hidden="true"></span>
 				</li>
-				<li class="pull-left">
+				<li class="pull-left" title="作者力推值得收藏的学习站点">
 					<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
 				</li>
-				<li class="pull-left">
-					<span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+				<li class="pull-left" title="作者近日活动">
+					<span class="glyphicon glyphicon-leaf tips" aria-hidden="true"></span>
 				</li>
 			</ul>
 		</div>
+
+		<!--主页弹出页面的音乐部分-->
 		<div id="music" class="col-lg-4 col-md-4">
 			<audio controls="controls" src="../bower_components/mp3/菊次郎的夏天.mp3">
 			  Your browser does not support this audio format.
@@ -102,5 +105,24 @@
 			</ul>
 			<p class="col-md-12 col-lg-12 text-center"></p>
 		</div>
+
+		<!--主页弹出部分的作者近日活动页面-->
+        <div id="tips"> 
+          <div class="tip-header"> 
+            <span class="glyphicon glyphicon-leaf span"></span>
+            <span class="span">&nbsp&nbsp&nbsp作者近日活动</span>
+            <span class="glyphicon glyphicon-minus min span"></span>
+          </div>
+          <ul class="navs"> 
+            <li class="top"></li>
+            <li class="music"></li>
+            <li class="IT"></li>
+            <li class="sport"></li>
+            <li class="game"></li>
+          </ul>
+        </div>
+		<!--主页弹出的作者最近的小迷照-->
+
+		<!--主页弹出的作者最近推荐大家值得去关注的几个学习的网站-->
 	</div>
 </body>

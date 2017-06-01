@@ -10,6 +10,8 @@ $(document).ready(function(){
 	    	//获取容器和音乐播放器
 	    	args.container = document.getElementById('container');
 	    	args.music = document.getElementById('music');
+	    	//获取作者近日活动的模块
+	    	args.tips = document.getElementById('tips');
 	    	//歌名数组
 	    	args.songs = ['晚安喵','北京巷弄','菊次郎的夏天','爱滴歌'];
 	    	window['args'] = args;
@@ -137,7 +139,11 @@ $(document).ready(function(){
 	   			songName(songSrc(audio.attr('src')));
 	   		}
 
-
 	   	}());
+
+
+	   	//对作者今日活动进行拖拽设置
+	   	libo.onlyDrag(args.container,args.tips);
+
 
 });
