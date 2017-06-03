@@ -177,4 +177,8 @@ $(document).ready(function(){
 	   	});
 
 
+	   	//模块化自定义滚动条项目
+	   	libo.totalDrag($('#slidepics .slidebar'),$('#slidepics .bar'),$('#lipics'),$('#slidepics .pic-container'));  //dragParent,dragObj,scrollObj,scrollParent
+
+
 });

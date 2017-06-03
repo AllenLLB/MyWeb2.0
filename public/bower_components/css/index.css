@@ -19,6 +19,19 @@ html,body {
 	cursor: pointer;
 }
 
+/*=============================设置滚动条的媒体查询部分===============*/
+@media screen and (max-width: 1366px) {
+     #slidepics .slidebar ,#slidepics .pic-container {
+        height: 540px;
+    }
+}
+
+@media screen and (width: 1920px) {
+     #slidepics .slidebar ,#slidepics .pic-container {
+        height: 900px;
+    }
+}
+
 
 /*===================================遮罩=============================*/
 #layer{
@@ -449,7 +462,6 @@ html,body {
 /*============图片容器=========*/
 #slidepics .pic-container{
 	width: 380px;
-	height: 82%;
 
 	position: absolute;
 	bottom: 0;
@@ -470,13 +482,14 @@ html,body {
 	height: 240px;
 	background-color: #fff;
 	margin-bottom: 10px;
+
+	color: #000;
 }
 
 
 /*===============================设置滚动条=======================================*/
  #slidepics .slidebar{
  	width: 9px;
- 	height: 82%;
 
  	position: absolute;
  	right: 4px;
@@ -494,7 +507,7 @@ html,body {
  	height: 50px;
  	position: absolute;
  	left: 0;
- 	top: 30px;
+ 	top: 0;
  	background-color: #ccc;
  	border-radius: 10px;
  	-webkit-border-radius: 10px;

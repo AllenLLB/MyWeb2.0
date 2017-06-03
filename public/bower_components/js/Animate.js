@@ -456,6 +456,72 @@
 			}else{
 				return lists[iMinId];
 			}
+		},
+
+		//封装带有滚动条的整体拖拽函数
+		totalDrag: function(dragParent,dragObj,scrollObj,scrollParent){
+			var that = this;
+		    var scale;
+
+			//滚动条移动的最大距离
+
+			var mostSmallTop =0,
+				mostBigTop   =parseInt(that.getStyle(dragParent[0],'height'))-parseInt(that.getStyle(dragObj[0],"height"));
+
+			
+			//要移动的块能移动的最大距离
+
+			var mostScrollHeight=parseInt(that.getStyle(scrollObj[0],'height'))-parseInt(that.getStyle(scrollParent[0],"height"));
+
+			var scrollT=0;	//能移动的块的高度
+			//most-large-left
+			//most-small-left
+
+			dragObj[0].onmousedown=function(ev){
+
+
+				var __this=this;
+				var oEvent=ev||window.event;
+
+				//mouse 距离自己的左边距和上边距
+
+				var selfT=oEvent.clientY-__this.offsetTop;	
+
+				// var oldT=Math.abs(scrollObj.offsetTop);
+
+
+				document.onmousemove=function(ev){
+					//因为要动态的改变高度
+					mostScrollHeight=parseInt(that.getStyle(scrollObj[0],'height'))-parseInt(that.getStyle(scrollParent[0],"height"));
+					var oE=ev||window.event;
+
+					//需要定位的距离
+					var t=oE.clientY-selfT;
+
+
+					if(t<=mostSmallTop){
+						t=mostSmallTop;
+					}else if(t>=mostBigTop){
+						t=mostBigTop;
+					}
+
+					scale=t/mostBigTop;
+					scrollT=-mostScrollHeight*scale;
+
+					// if(Math.abs(scrollT)<oldT){
+					// 	scrollT=-oldT;
+					// }
+					dragObj[0].style.top=t+"px";
+					scrollObj[0].style.top=scrollT+"px";
+					// oldT=scrollT;
+				}
+
+				document.onmouseup=function(){
+					document.onmousemove=null;
+					document.onmouseup=null;
+				}
+				return false;   //取消默认事件(拖拽的时候不去选定周边的文字等元素),在拖拽开始的时候就会阻止
+			}
 		}
 
 
