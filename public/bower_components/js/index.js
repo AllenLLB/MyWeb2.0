@@ -12,6 +12,8 @@ $(document).ready(function(){
 	    	args.music = document.getElementById('music');
 	    	//获取作者近日活动的模块
 	    	args.tips = document.getElementById('tips');
+	    	//获取最近小迷照的模块
+	    	args.pics = document.getElementById('slidepics');
 	    	//歌名数组
 	    	args.songs = ['晚安喵','北京巷弄','菊次郎的夏天','爱滴歌'];
 	    	window['args'] = args;
@@ -144,6 +146,35 @@ $(document).ready(function(){
 
 	   	//对作者今日活动进行拖拽设置
 	   	libo.onlyDrag(args.container,args.tips);
+	   	//对近日活动块的选项卡进行设置
+        $('.navs li').each(function(index,item){
+            $(this).click(function(){
+            	$('#tips-container ul').each(function(){
+            		$(this).addClass('nosee').removeClass('show');
+            	});
+
+            	$('#tips-container ul').eq(index).addClass('show');
+            });
+        });
+
+        //控制近日活动的显示与否
+	   	$('#box-foot .tips').click(function(){
+	   		$('#tips').addClass('show');
+	   	});
+	   	$('#tips .min').click(function(){
+	   		$('#tips').removeClass('show').addClass('nosee');
+	   	});
+
+
+
+	   	/*============================设置图片库的显示与浏览==========================*/
+        //控制近日活动的显示与否
+	   	$('#box-foot .pics').click(function(){
+	   		$('#slidepics').removeClass('nosee').addClass('show');
+	   	});
+	   	$('#slidepics .no').click(function(){
+	   		$('#slidepics').removeClass('show').addClass('nosee');
+	   	});
 
 
 });

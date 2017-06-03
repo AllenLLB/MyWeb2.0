@@ -206,13 +206,15 @@ html,body {
 
 
 
-/*======作者近日的值得关注的日常活动======*/
+/*============================作者近日的值得关注的日常活动==============================*/
 #tips {
 	width: 250px;
 	height: 250px;
-	background-color: rgba(255,0,0,.5);
 
 	position: absolute;
+
+	right: 150px;
+	top: 200px;
 
 }
 
@@ -234,3 +236,272 @@ html,body {
 	margin-left: 105px;
 	cursor: pointer;
 }
+
+/*=================导航部分===========*/
+#tips .navs{
+	width: 100%;
+	height:35px;
+	line-height: 35px;
+	background: rgba(253,253,253,.65);
+	padding: 0;
+}
+
+#tips .navs li{
+	float: left;
+	width: 20%;
+	height: 100%;
+	text-align: center;
+	cursor: pointer;
+	font-size: 14px;
+}
+#tips .navs li:hover{
+	color: #0F8CC1;
+}
+
+#tips .navs:after{
+	content: "";
+	clear: both;
+}
+
+
+/*趣事的容器*/
+#tips-container{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 250px;
+	height: 310px;
+
+	/*====设置竖直方向超出的部分显示的方式====*/
+	overflow-y: auto;
+	overflow-x: hidden;
+	border-bottom: 3px solid #eee;
+}
+
+.show{
+	display: block;
+}
+.nosee{
+	display: none;
+}
+
+
+/*=======设置各个li的样式=======*/
+#tips-container .music{
+  width: 100%;
+  height: 100px;
+}
+#tips-container .music li a:hover{
+  text-decoration: none;
+}
+/*=====设置span=====*/
+#tips-container .music li .head3{
+	font-weight: bold;
+	padding-left: 10px;
+}
+#tips-container .music li p{
+  padding-left: 25px;
+}
+
+
+#tips-container .top li a,
+#tips-container .music li a,
+#tips-container .IT li a,
+#tips-container .sport li a,
+#tips-container .game li a{
+	color: rgb(8,136,185);
+}
+
+#tips-container .top li,
+#tips-container .music li,
+#tips-container .IT li,
+#tips-container .sport li,
+#tips-container .game li{
+	width: 100%;
+	background-color: rgba(255,255,255,.85);
+	padding: 5px 6px;
+}
+/*========设置鼠标移上去之后的效果========*/
+#tips-container .top li:hover,
+#tips-container .music li:hover,
+#tips-container .IT li:hover,
+#tips-container .sport li:hover,
+#tips-container .game li:hover{
+	background-color: rgb(255,255,255);
+	cursor: pointer;
+}
+
+#tips-container .top{
+  width: 100%;
+  height: 100px;
+} 
+#tips-container .top li a:hover{
+  text-decoration: none;
+}
+/*=====设置span=====*/
+#tips-container .top li .head3{
+	font-weight: bold;
+	padding-left: 10px;
+}
+#tips-container .top li p{
+  padding-left: 25px;
+}
+
+
+
+#tips-container .IT{
+  width: 100%;
+  height: 100px;
+} 
+#tips-container .IT li a:hover{
+  text-decoration: none;
+}
+/*=====设置span=====*/
+#tips-container .IT li .head3{
+	font-weight: bold;
+	padding-left: 10px;
+}
+#tips-container .IT li p{
+  padding-left: 25px;
+}
+
+
+#tips-container .sport{
+  width: 100%;
+  height: 100px;
+}
+#tips-container .sport li a:hover{
+  text-decoration: none;
+}
+/*=====设置span=====*/
+#tips-container .sport li .head3{
+	font-weight: bold;
+	padding-left: 10px;
+}
+#tips-container .sport li p{
+  padding-left: 25px;
+}
+
+
+#tips-container .game{
+  width: 100%;
+  height: 100px;
+}
+#tips-container .game li a:hover{
+  text-decoration: none;
+}
+/*=====设置span=====*/
+#tips-container .game li .head3{
+	font-weight: bold;
+	padding-left: 10px;
+}
+#tips-container .game li p{
+  padding-left: 25px;
+}
+
+
+/*=================================小迷照===================================*/
+#slidepics{
+	width: 403px;
+	height: 100%;
+	background-color: rgba(28,29,29,.65);
+
+	position: absolute;
+
+	z-index: 1056;
+
+    /*=====暂时的设置颜色=====*/
+	color: #fff;
+}
+
+/*==========设置关闭按钮==========*/
+#slidepics .no{
+	position: absolute;
+    top: 8px;
+    right: 8px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*============头部的设置============*/
+#slidepics .head{
+	width: 380px;
+	height: 80px;
+
+	background-color: transparent;
+	margin: 30px auto  10px auto;
+
+	padding: 0 10px;
+
+	background-color: transparent;
+}
+#slidepics .head .pic{
+	font-size: 20px;
+}
+#slidepics .library{
+	display: block;
+	font-size: 14px;
+	margin-top: 35px;
+}
+
+
+/*============图片容器=========*/
+#slidepics .pic-container{
+	width: 380px;
+	height: 82%;
+
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -196px;
+
+	background-color: transparent;
+
+	overflow: hidden;
+}
+#lipics{
+	position: absolute;
+	width: 100%;
+	height: auto;
+}
+#lipics li{
+	width: 100%;
+	height: 240px;
+	background-color: #fff;
+	margin-bottom: 10px;
+}
+
+
+/*===============================设置滚动条=======================================*/
+ #slidepics .slidebar{
+ 	width: 9px;
+ 	height: 82%;
+
+ 	position: absolute;
+ 	right: 4px;
+ 	bottom: 0;
+
+ 	background-color: rgba(28,29,29,.95);
+
+ 	border-radius: 10px;
+ 	-webkit-border-radius: 10px;
+ 	-moz-border-radius: 10px;
+ 	cursor: pointer;
+}
+ #slidepics .slidebar .bar{
+ 	width: 100%;
+ 	height: 50px;
+ 	position: absolute;
+ 	left: 0;
+ 	top: 30px;
+ 	background-color: #ccc;
+ 	border-radius: 10px;
+ 	-webkit-border-radius: 10px;
+ 	-moz-border-radius: 10px;
+ }
+
+ #slidepics .slidebar .bar:hover{
+ 	background-color: #fff;
+ 	cursor: pointer;
+ }
