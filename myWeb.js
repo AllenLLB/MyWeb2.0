@@ -1,4 +1,5 @@
 var express = require("express");
+var route = require('./route');
 var url = require('url');
 var path = require("path");
 var fs = require("fs");
@@ -19,33 +20,9 @@ myweb.listen(port,function(){
 	console.log("myweb living on port:" + port);
 });
 
-//songs
 
-//设置/路由
-myweb.get('/',function(req,res){
-	res.render('index');
-});
-
-//设置个人主页的路由
-myweb.get('/personPage',function(req,res){
-	res.render('personPage');
-});
-
-//设置照片墙的路由
-myweb.get('/picwall',function(req,res){
-	res.render('picWall');
-});
-
-
-//设置关于我的路由路线
-myweb.get('/aboutme',function(req,res){
-	res.render('aboutme');
-});
-
-//定制关于网站的路由路线
-myweb.get('/aboutsite',function(req,res){
-	res.render('aboutsite');
-});
+//所有的路由处理都放置在路由处理函数中进行,只需要传递一个项目app的值进去直接进行设置就行了
+route(myweb);
 
 //定制 404 页面 
 myweb.use(function(req, res){          
