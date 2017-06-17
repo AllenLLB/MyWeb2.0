@@ -522,8 +522,27 @@
 				}
 				return false;   //取消默认事件(拖拽的时候不去选定周边的文字等元素),在拖拽开始的时候就会阻止
 			}
+		},
+		/*=========设置图片预加载函数==========*/
+		preload: function(arr,every){
+          var len = arr.length,
+              count = 0;
+          arr.forEach(function(item,index){
+            var img = new Image();
+            img.src = item;
+            //由于这是大量的异步请求,不能在循环时进行count++,应该在图片加载之后进行count++
+            img.onload = function(){
+              count++;
+              var goal_width = parseInt((count/len)*450);
+              every(goal_width,count,len);
+            };
+            img.onerrer = function(){
+              count++;
+              var goal_width = parseInt((count/len)*450);
+              every(goal_width,count,len);
+            };
+          });
 		}
-
 
 	};
 

@@ -4,7 +4,7 @@ function route(myweb){
 	//songs
 
 	//设置/路由
-	myweb.get('/',function(req,res){
+	myweb.get('/index',function(req,res){
 		res.render('index');
 	});
 
@@ -33,6 +33,11 @@ function route(myweb){
 	//设置天刀武侠的路由
 	myweb.get('/wuxia',function(req,res){
 		res.render('wuxia');
+	});
+
+	//设置load页面的路由
+	myweb.get('/',function(req,res){
+		res.render('loading');
 	});
 
 }
