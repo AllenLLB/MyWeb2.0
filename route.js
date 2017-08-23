@@ -3,10 +3,10 @@ module.exports = route;
 function route(myweb){
 	//songs
 
-	//设置/路由
-	myweb.get('/index',function(req,res){
-		res.render('index');
-	});
+	// //设置/路由
+	// myweb.get('/index',function(req,res){
+	// 	res.render('index');
+	// });
 
 	//设置个人主页的路由
 	myweb.get('/personPage',function(req,res){
@@ -37,7 +37,7 @@ function route(myweb){
 
 	//设置load页面的路由
 	myweb.get('/',function(req,res){
-		res.render('loading');
+		res.render('index');
 	});
 
 }
